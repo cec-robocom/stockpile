@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stockpile: Components Register for IEEE RAS</title>
-    <link rel="stylesheet" href="{% static 'components/assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'component/assets/css/main.css' %}">
+
 </head>
 
 <body>
     <h1>IEEE RAS COMPONENTS BORROW REGISTER</h1>
-    <form id="borrow-form" action="#" method="post">
+    <form id="borrow-form" action="/component/" method="POST">
+        {% csrf_token %}
         <h2>BORROW</h2>
         <label>Name of borrower:
             <input type="text" name="borrower" placeholder="Eg. John Smith" required>
@@ -55,7 +57,10 @@
         </tbody>
     </table> -->
 
-    <script src="{% static 'components/assets/js/main.js'%}"></script>
+    <script src="{% static 'component/assets/js/main.js'%}"></script>
+
+
+
 </body>
 
 </html>

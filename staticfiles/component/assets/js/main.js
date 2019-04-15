@@ -23,3 +23,6 @@ newComponentButton.addEventListener('click', function() {
     borrow_form.insertBefore(nodeToInsert, newComponentButton);
     console.log('clicked button');
 });
+
+
+
