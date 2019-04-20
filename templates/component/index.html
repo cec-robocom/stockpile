@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,13 +6,13 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
         <title>new homepage</title>
-        <link href="../../staticfiles/component/assets/css/index.css" rel="stylesheet">
+        <link href="{% static 'component/assets/css/index.css' %}" rel="stylesheet">
         <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Patua+One" rel="stylesheet">
     </head>
     <body>
         <header>
-            <div class="brand-image"><img src="../../staticfiles/component/assets/images/IEEE_RAS_logo.png" alt="IEEE RAS"></div>
+            <div class="brand-image"><img src="{% static 'component/assets/images/IEEE_RAS_logo.png' %}" alt="IEEE RAS"></div>
             <h1>IEEE RAS COMPONENTS REGISTER</h1>
         </header>
         <div class="menu">
@@ -33,6 +34,6 @@
                 </div>
         </div>
 
-        <script src="../../staticfiles/component/assets/js/lib/anime.min.js"></script>
+        <script src="{% static 'component/assets/js/lib/anime.min.js' %}"></script>
     </body>
 </html>
