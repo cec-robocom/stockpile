@@ -1,0 +1,5 @@
+.vscode
+temp_dev_files
+component/__pycache__/
+stockpile/__pycache__/
+component/migrations/__pycache__/

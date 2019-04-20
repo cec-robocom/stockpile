@@ -1,0 +1,103 @@
+/* COLOR PALETTE
+#0a0908
+#19535f
+#2ec4b6
+#e6ebe0
+#eb5e55
+*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #e6ebe0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    transition: all 0.5s;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1rem;
+    color: #98012e;
+}
+
+.brand-image {
+    width: 10rem;
+    margin: 1rem;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.menu-item {
+    margin-bottom: 2rem;
+}
+
+.menu-item>div {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.underline {
+    background: black;
+    width: 0;
+    height: 1rem;
+}
+
+/* Thanks for the tip https://stackoverflow.com/a/4502693/6882980 */
+.menu-item>div:hover>.underline {
+    width: 50%
+}
+
+.menu-item > div:hover {
+    transition-delay: 0.1s;
+    transform: translate(5vw);
+}
+
+.menu-item>div>svg {
+    width: 100%;
+}
+
+.menu-item>div>svg>text {
+    font-family: 'Patua One', cursive;
+    fill: transparent;
+    stroke: #19535f;
+    stroke-width: 0.1px;
+}
+
+.menu-item>div>svg>text:hover {
+    fill: #19535f;
+    cursor: pointer;
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+    color: #19535f;
+    font-size: 8rem;
+    position: relative;
+    bottom: 4rem;
+}
+
+
+@media(min-width: 992px) {
+    .menu-item>div {
+        width: 50%;
+    }
+
+    .menu-item>div>svg {
+        width: 100%;
+    }
+}
