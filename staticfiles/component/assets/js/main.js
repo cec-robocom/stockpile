@@ -24,23 +24,17 @@ newComponentButton.addEventListener('click', function () {
     console.log('clicked button');
 });
 
-// let borrowPageTransition = anime({
-//     targets: '.underline',
-//     // width: ['50%', '100%'],
-//     left: '+=50%',
-//     easing: 'linear',
-//     autoplay: false
-// });
-
 let menuButtons = document.getElementsByClassName('menu-item');
 let header = document.getElementsByTagName('header')[0];
 
 let borrowButton = menuButtons[0];
 let returnButton = menuButtons[1];
-
+/**
+ * anime object for page transition animation of borrow page
+ */
 let borrowPageTransition = anime.timeline({
     autoplay: false,
-    easing: 'linear'
+    easing: 'easeInQuad'
 });
 
 borrowPageTransition
@@ -54,29 +48,38 @@ borrowPageTransition
 })
 .add({
     targets: returnButton,
-    opacity: 0,
-    translateX: '60vw',
+    translateX: '50vw',
+    opacity: [1, 0],
     duration: 500
 })
 .add({
     targets: '.menu',
-    // transateX: '500px',
     translateY: '-100vh',
     duration: 200,
-    // width: '25%',
+    opacity: [1, 0],
     complete: function() {
         console.log('third step complete');
-    },
-    begin: function() {
-        console.log('third step begin');
     }
-})
+}, '+=1')
 .add({
     targets: '.borrow-form',
     translateY: '-108vh',
     duration: 200
-});
+})
+// .add({
+//     targets: '.borrow-form',
+//     opacity: [0, 1],
+//     duration: 200
+// }, '+=1')
+.add({
+    targets: '#borrow-page-title + .page-title-decoration',
+    width: '+=40%',
+    duration: 200
+}, '+=1');
 
+/**
+ * reverse the direction of animation so that we can get back to home
+ */
 borrowButton.addEventListener('click', function () {
     console.log('clicked borrow button');
     borrowPageTransition.play();
