@@ -1,0 +1,102 @@
+/* COLOR PALETTE
+#0a0908
+#19535f
+#2ec4b6
+#e6ebe0
+#eb5e55
+*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #e6ebe0;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+* {
+    transition: all 0.5s;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1rem;
+    color: #98012e;
+}
+
+header {
+    margin-top: 5vh;
+    margin-left: 2vw;
+    margin: 5vh 0 10vh 2vw;
+    position: relative;
+}
+
+.brand-image {
+    width: 10rem;
+}
+
+.menu {
+    text-align: center;
+    margin: 3vh auto 0 auto;
+    height: 100vh;
+    position: relative;
+}
+
+.menu-item {
+    width: 90%;
+    margin: 0 auto 5vh auto;
+    overflow: hidden;
+    /* position: absolute; */
+}
+
+.underline {
+    background: #eb5e55;
+    width: 0;
+    height: 1rem;
+    position: relative
+}
+
+/* Thanks for the tip https://stackoverflow.com/a/4502693/6882980 */
+.menu-item:hover>.underline, .menu-item:focus>.underline {
+    width: 50%
+}
+
+.menu-item:hover, .menu-item:focus {
+    outline: none;
+}
+
+.menu-item>svg {
+    width: 100%;
+}
+
+.menu-item>svg>text {
+    font-family: 'Patua One', cursive;
+    fill: transparent;
+    stroke: #19535f;
+    stroke-width: 0.2px;
+}
+
+.menu-item>svg>text:hover, .menu-item>svg>text:focus {
+    fill: #19535f;
+    cursor: pointer;
+    outline: none;
+}
+
+@media(min-width: 992px) {
+    .menu-item {
+        width: 50%;
+    }
+
+    .menu-item>svg {
+        width: 100%;
+    }
+}

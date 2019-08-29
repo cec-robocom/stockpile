@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <title>Stockpile: Components Register for IEEE RAS</title>
+        <link href="../../staticfiles/component/assets/css/index.css" rel="stylesheet">
+        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Patua+One" rel="stylesheet">
+    </head>
+    <body>
+        <div class="menu">
+            <header>
+                <div class="brand-image"><img src="../../staticfiles/component/assets/images/IEEE_RAS_logo.png" alt="IEEE RAS"></div>
+                <h1>IEEE RAS COMPONENTS REGISTER</h1>
+            </header>
+            <div class="menu-item">
+                <svg viewbox="0 0 53 13">
+                    <text tabindex="0" x="0" y="12">Borrow</text>
+                </svg>
+                <div class="underline"></div>
+            </div>
+            <div class="menu-item">
+                <svg viewbox="0 0 50 13">
+                    <text x="0" y="12">Return</text>
+                </svg>
+                <div class="underline"></div>
+            </div>
+        </div>
+
+        <div class="borrow-form">
+            <form action="/component/" id="borrow-form" method="POST">
+                <h2>BORROW</h2>
+                <label>Name of borrower:
+                    <input name="borrower" placeholder="Eg. John Smith" required type="text">
+                </label>
+                <h3>Components to rent:</h3>
+                <div class="component">
+                    <select id="component_name" name="component_name">
+                        <option selected value="none">--Select a component--</option>
+                        <option value="resistor">Resistor</option>
+                        <option value="capacitor">Capacitor</option>
+                        <option value="diode">Diode</option>
+                    </select>
+                    <label for="component_count">Count:
+                    </label>
+                    <input min="0" name="component_count" placeholder="Eg. 10" required type="number">
+                </div>
+                <button id="get-another-one" type="button">get another one</button>
+                <button type="submit">Submit for borrow</button>
+            </form>
+            <button class="back-to-home">back to home</button>
+        </div>
+
+        <script src="../../staticfiles/component/assets/js/lib/anime.min.js"></script>
+        <script src="../../staticfiles/component/assets/js/main.js"></script>
+    </body>
+</html>
