@@ -1,1 +1,0 @@
-web: gunicorn stockpile.wsgi
