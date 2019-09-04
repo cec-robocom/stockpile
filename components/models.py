@@ -12,10 +12,18 @@ class user(models.Model):
         return self.pk
 
 
+class category(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.pk
+
+
 class component(models.Model):
     name = models.CharField(max_length=30)
     stock = models.IntegerField()
     borrowed_by = models.ManyToManyField(user)
+    type = models.ManyToManyField(category)
 
     def __str__(self):
         return self.pk
