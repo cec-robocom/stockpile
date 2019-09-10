@@ -1,0 +1,50 @@
+/* PC  */
+@media (min-width :641px) {
+    .mobile-cards {
+        display: none;
+    }
+}
+
+
+
+/* MOBILE */
+@media only screen and (max-width:640px) {
+    table {
+        display: none;
+    }
+}
+
+.large-card {
+    margin: 20px 0;
+    border-radius: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tbody {
+    width: 100%;
+}
+
+tr {
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+    border: 1px solid lightgray;
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #222222;
+    color: #f8f8f8;
+}
+
+/* tr:nth-child(even) {
+    background-color: #dddddd;
+} */
