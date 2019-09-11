@@ -1,0 +1,42 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+
+{% block title %}
+<title>STOCKPILE | LOGIN</title>
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block header-info %}
+<div></div>
+{% endblock %}
+
+{% block content  %}
+
+<div class="login-welcome">
+    <h1>Register as new user at Robocom stockpile</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur porro tempore provident eligendi
+        eius numquam nesciunt, eum, ut, dolorem fuga repudiandae minima minus iste dolor ab impedit? Voluptas,
+        unde at?</p> <br>
+    <!-- <p style="color:#a0a0a0"><i>Please login to continue</i></p> -->
+</div>
+
+<div class="login-container">
+    <div class="login-box">
+        <form class="login-form" method='post' action="{% url 'register' %}">
+            {% csrf_token %}
+
+            {% if form.errors %}
+            <p style="color:#C31E0F;">ERROR: Something went wrong</p>
+            {% endif %}
+
+            <input type="text" name="username" id="username" placeholder="Create Username">
+            <input type="password" name="password1" id="password1" placeholder="Create New Password">
+            <input type="password" name="password2" id="password2" placeholder="Confirm Password">
+            <input class="login-submit" type="submit" value="Register">
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 90px;
+    width: 100%;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid lightgray 1px;
+}
+
+header .title {
+    color: #F8F8F8;
+    padding: 30px;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+header .header-info {
+    display: flex;
+    align-items: center;
+    color: #F8F8F8;
+    padding: 30px;
+    font-size: 1.1em;
+}
+
+header .header-info a {
+    text-decoration: none;
+    color: #F8F8F8;
+    font-weight: 800;
+}
+
+main {
+    display: flex;
+}
+
+.error {
+    font-size: 3em;
+    color: #222222;
+}
+
+.container {
+    margin: 30px 0px 30px 0px;
+    padding: 0 30px 0 30px;
+}
+
+nav {
+    width: 200px;
+    /* background-color: ; */
+    padding: 30px;
+    padding-top: 50px;
+    /* border-right: solid lightgray 1px; */
+}
+
+nav .categories {
+    list-style: none;
+}
+
+nav .categories li a {
+    text-decoration: none;
+    color: #4091E7;
+    /* text-decoration: underline; */
+}
+
+.card {
+    margin: 30px 20px 30px 20px;
+    width: 200px;
+    height: 250px;
+    background-color: #F8F8F8;
+    border: solid lightgray 1px;
+    /* box-shadow: 0px 0px 5px rgb(82, 82, 82,0.7); */
+    border-radius: 5px;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card h3 {
+    padding: 5px;
+    font-weight: 400;
+    color: black;
+}
+
+.card .card-footer {
+    padding: 0px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .card-footer .stock {
+    font-size: 0.9em;
+    /* font-style: italic; */
+    color: gray;
+}
+
+.card .card-footer .order-now {
+    font-size: 0.9em;
+    text-decoration: none;
+    /* font-style: italic; */
+    color: #4091E7;
+
+}
+
+.card .img {
+    height: 180px;
+    width: 200px;
+    background-color: gray;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #222222;
+
+    border-top: solid lightgray 1px;
+}
+
+@media only screen and (max-width:1024px) {
+    nav {
+        display: none;
+    }
+
+    .container {
+        margin: 70px 0;
+    }
+
+    .card {
+        margin: 20px auto;
+    }
+}

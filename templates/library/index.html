@@ -1,0 +1,46 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}
+<title>STOCKPILE | LIBRARY</title>
+{% endblock %}
+
+
+
+{% block content %}
+
+<nav>
+    <ol class="categories">
+        <p>Categories</p>
+        <li><a href="#">Boards</a></li>
+        <li><a href="#">Sensors</a></li>
+        <li><a href="#">Connectors</a></li>
+        <li><a href="#">Integrated Chips</a></li>
+    </ol>
+</nav>
+
+<div class="container">
+    <div class="row">
+
+        {% if not context %}
+        <p class="error">Oops.. Something went wrong.</p>
+        {% endif %}
+
+        <!-- MOCK DATA BEGINS -->
+
+        <!-- <div class="col col-md-3 col-sm-1">
+                <div class="card">
+                    <div class="img"></div>
+                    <h3 class="component-name">Component name</h3>
+                    <div class="card-footer">
+                        <p class="stock">45 left</p>
+                        <a href="#" class="order-now">Add to Cart</a>
+                    </div>
+                </div>
+            </div> -->
+
+        <!--  MOCK DATA ENDS  -->
+
+    </div>
+</div>
+
+{% endblock %}

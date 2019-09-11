@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block title %}
+    <title>Stockpile</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="title">STOCKPILE</div>
+
+        {% block header-info %}
+        <div class="header-info">
+
+            {% if user.is_authenticated %}
+            <p class="name">Hi, <a href=""> {{ user.username }} </a> </p>
+            {% else %}
+            <a href="{% url 'login' %}">LOGIN</a>
+            {% endif %}
+
+        </div>
+        {% endblock %}
+
+    </header>
+
+    <main>
+
+        {% block content %}
+
+        <!-- CONTENT GOES HERE -->
+
+        {% endblock %}
+
+    </main>
+
+    <!-- <footer></footer> -->
+</body>
+
+</html>
