@@ -1,7 +1,7 @@
 from django.contrib import admin
-from components.models import user, component, history, category
+from components.models import User, Component, History, Category
 
-admin.site.register(user)
-admin.site.register(component)
-admin.site.register(category)
-admin.site.register(history)
+admin.site.register(User)
+admin.site.register(Component)
+admin.site.register(Category)
+admin.site.register(History)

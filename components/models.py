@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class user(models.Model):
+class User(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField()
     phone_number = models.CharField(max_length=12)
@@ -12,26 +12,26 @@ class user(models.Model):
         return self.pk
 
 
-class category(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.pk
 
 
-class component(models.Model):
+class Component(models.Model):
     name = models.CharField(max_length=30)
     stock = models.IntegerField()
-    borrowed_by = models.ManyToManyField(user)
-    type = models.ManyToManyField(category)
+    borrowed_by = models.ManyToManyField(User)
+    type = models.ManyToManyField(Category)
 
     def __str__(self):
         return self.pk
 
 
-class history(models.Model):
-    user_id = models.ForeignKey(user, on_delete=models.CASCADE)
-    component_taken = models.ForeignKey(component, on_delete=models.CASCADE)
+class History(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    component_taken = models.ForeignKey(Component, on_delete=models.CASCADE)
     taken_date = models.DateTimeField(default=timezone.now)
     return_date = models.DateTimeField(null=True)
 
